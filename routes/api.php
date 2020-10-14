@@ -25,5 +25,6 @@ Route::namespace('Api')->group(function(){
     Route::group(['middleware' => ['auth:api']], function () {
 
         Route::get('helloworld',[AuthController::class, 'index']);
+        Route::get('logout',[AuthController::class, 'logout']);
     });
 });
